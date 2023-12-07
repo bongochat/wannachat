@@ -43,6 +43,18 @@ func (m *Repository) SaftyTipsPageHandler(w http.ResponseWriter, r *http.Request
 	render.RenderTemplate(w, r, "safety_tips.page.go.tmpl", &models.TemplateData{})
 }
 
+func (m *Repository) ChatRulesPageHandler(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, r, "chat_rules.page.go.tmpl", &models.TemplateData{})
+}
+
+func (m *Repository) LoginPageHandler(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, r, "login.page.go.tmpl", &models.TemplateData{})
+}
+
+func (m *Repository) SignupPageHandler(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, r, "signup.page.go.tmpl", &models.TemplateData{})
+}
+
 func (m *Repository) ContactPageHandler(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, "contact.page.go.tmpl", &models.TemplateData{})
 }

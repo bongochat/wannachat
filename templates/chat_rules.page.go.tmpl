@@ -1,12 +1,11 @@
-{% extends 'home/base.html' %}
-{% load static %}
+{{template "base" .}}
 
-{% block extracss %}
-    <link rel="stylesheet" href="{% static 'home/assets/faq.css' %}">
-{% endblock extracss %}
+{{define "css"}}}
+    <link rel="stylesheet" href="/static/home/assets/faq.css">
+{{end}}
 
 
-{% block content %}
+{{define "content"}}
 <div class="col-md-7 col-lg-8">
     <div>
         <div class="faq-title text-center pb-3">
@@ -127,4 +126,4 @@
         </div>
     </div>
 </div>
-{% endblock content %}
+{{end}}

@@ -23,6 +23,10 @@ func routes(app *config.AppConfig) http.Handler {
 	mux.Get("/faq/", handlers.Repo.FAQPageHandler)
 	mux.Get("/tos/", handlers.Repo.TOSPageHandler)
 	mux.Get("/safety-tips/", handlers.Repo.SaftyTipsPageHandler)
+	mux.Get("/chat-rules/", handlers.Repo.ChatRulesPageHandler)
+
+	mux.Get("/login/", handlers.Repo.LoginPageHandler)
+	mux.Get("/signup/", handlers.Repo.SignupPageHandler)
 
 	mux.Get("/contact/", handlers.Repo.ContactPageHandler)
 	mux.Post("/contact/", handlers.Repo.PostContactPageHandler)
