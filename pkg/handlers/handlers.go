@@ -35,8 +35,12 @@ func (m *Repository) FAQPageHandler(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, "faq.page.go.tmpl", &models.TemplateData{})
 }
 
-func (m *Repository) BlogPageHandler(w http.ResponseWriter, r *http.Request) {
-	render.RenderTemplate(w, r, "blog.page.go.tmpl", &models.TemplateData{})
+func (m *Repository) TOSPageHandler(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, r, "tos.page.go.tmpl", &models.TemplateData{})
+}
+
+func (m *Repository) SaftyTipsPageHandler(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, r, "safety_tips.page.go.tmpl", &models.TemplateData{})
 }
 
 func (m *Repository) ContactPageHandler(w http.ResponseWriter, r *http.Request) {
