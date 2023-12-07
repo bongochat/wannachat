@@ -20,14 +20,13 @@ func routes(app *config.AppConfig) http.Handler {
 	mux.Use(SessionLoad)
 
 	mux.Get("/", handlers.Repo.HomePageHandler)
-	mux.Get("/download/", handlers.Repo.DownloadPageHandler)
+	mux.Get("/faq/", handlers.Repo.FAQPageHandler)
 	mux.Get("/blog/", handlers.Repo.BlogPageHandler)
 
 	mux.Get("/contact/", handlers.Repo.ContactPageHandler)
 	mux.Post("/contact/", handlers.Repo.PostContactPageHandler)
 	mux.Get("/contact/json/", handlers.Repo.ContactPageJSON)
 
-	mux.Get("/faq/", handlers.Repo.FAQPageHandler)
 	mux.Get("/robots.txt", handlers.Repo.RobotsHandler)
 
 	// load static files

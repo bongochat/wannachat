@@ -31,8 +31,8 @@ func (m *Repository) HomePageHandler(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, "home.page.go.tmpl", &models.TemplateData{})
 }
 
-func (m *Repository) DownloadPageHandler(w http.ResponseWriter, r *http.Request) {
-	render.RenderTemplate(w, r, "download.page.go.tmpl", &models.TemplateData{})
+func (m *Repository) FAQPageHandler(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, r, "faq.page.go.tmpl", &models.TemplateData{})
 }
 
 func (m *Repository) BlogPageHandler(w http.ResponseWriter, r *http.Request) {
@@ -69,10 +69,6 @@ func (m *Repository) ContactPageJSON(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(out)
-}
-
-func (m *Repository) FAQPageHandler(w http.ResponseWriter, r *http.Request) {
-	render.RenderTemplate(w, r, "faq.page.go.tmpl", &models.TemplateData{})
 }
 
 func (m *Repository) RobotsHandler(w http.ResponseWriter, r *http.Request) {
