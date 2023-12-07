@@ -1,0 +1,32 @@
+{{ template "base" . }}
+
+
+{{define "content"}}
+<div class="col-md-7 col-lg-8">
+    <div class="card-columns category-section-area">
+            <div class="card">
+                <div class="section-btn">
+                    <a target="_self" href="#" class="btn btn-primary btn-md" id="random-chat"></a>
+                </div>
+                <div class="sub_category">
+                    <ul>
+                            <li>
+                                    <a href=""></a>
+                                    <!-- <a class="chatroom" href="#" onclick="openChatWindow('')"></a> -->
+                                    <a href=""></a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+</div>
+{{end}}
+
+
+{{ define "scripts" }}
+    <script>
+        function openChatWindow(chatroom) {  
+            window.open(chatroom, "Chat Room", "height=600,width=700,screenX=500");
+        }
+    </script>
+{{end}}}
