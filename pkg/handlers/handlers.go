@@ -55,6 +55,10 @@ func (m *Repository) SignupPageHandler(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, "signup.page.go.tmpl", &models.TemplateData{})
 }
 
+func (m *Repository) ChatRoomPageHandler(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, r, "chatroom.page.go.tmpl", &models.TemplateData{})
+}
+
 func (m *Repository) ContactPageHandler(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, "contact.page.go.tmpl", &models.TemplateData{})
 }
